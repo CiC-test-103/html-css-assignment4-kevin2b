@@ -1,0 +1,258 @@
+@import "./variables.css";
+
+:root {
+  font-family: var(--ff-base);
+  min-inline-size: var(--minWidth);
+  background-color: var(--clr-background);
+}
+
+.wrapper {
+  max-inline-size: var(--maxWidth-mobile);
+  margin-inline: auto;
+  font-weight: 500;
+}
+
+.card {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: auto;
+  font-size: var(--font-text);
+  background-color: var(--clr-cardBackground-primary);
+}
+
+.card__header {
+  font-size: var(--font-header);
+  font-weight: 800;
+}
+
+.result {
+  text-align: center;
+  background: linear-gradient(
+    var(--clr-resultBackgroundGradient-1),
+    var(--clr-resultBackgroundGradient-2)
+  );
+  padding-inline: 2rem;
+  padding-block: 1.6rem 2rem;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.result__header {
+  color: var(--clr-resultText-secondary);
+  font-weight: 700;
+}
+
+.result__score-curr,
+.result__word {
+  color: var(--clr-resultText-primary);
+}
+
+.result__score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1.65rem;
+}
+
+.result__score {
+  border-radius: 50%;
+  background: linear-gradient(
+    var(--clr-circleGradient-1),
+    var(--clr-circleGradient-2)
+  );
+  padding-inline: 2rem;
+  padding-block: 1.65rem;
+  inline-size: 8.75rem;
+  block-size: 8.75rem;
+}
+
+.result__score-curr {
+  font-size: var(--font-result-big);
+  font-weight: 800;
+}
+
+.result__score-total {
+  color: var(--clr-resultText-tertiary);
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+.result__word {
+  font-size: var(--font-result-medium);
+}
+
+.result__description {
+  padding-inline: 0.75rem;
+  margin-block: 0.5rem;
+  color: var(--clr-resultText-secondary);
+  line-height: 1.3;
+}
+
+.summary {
+  padding-inline: 1.9rem;
+  padding-block: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.summary__header {
+  margin-block-end: 0.5rem;
+}
+
+.summary__header,
+.attribute__score > span {
+  color: var(--clr-summaryText-primary);
+  font-weight: 800;
+}
+
+.attribute {
+  display: flex;
+  padding-block: 1.1rem;
+  padding-inline: 1rem;
+  gap: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.attribute__score > span {
+  margin-inline-end: 0.25rem;
+}
+
+.reaction {
+  background-color: hsla(var(--clr-lightRed), 0.05);
+}
+
+.memory {
+  background-color: hsla(var(--clr-orangeYellow), 0.05);
+}
+
+.verbal {
+  background-color: hsla(var(--clr-greenTeal), 0.05);
+}
+
+.visual {
+  background-color: hsla(var(--clr-cobaltBlue), 0.05);
+}
+
+.attribute__img {
+  display: block;
+  max-block-size: 1.5rem;
+  block-size: 100%;
+  inline-size: auto;
+}
+
+.attribute__name {
+  font-weight: 700;
+}
+
+.reaction__name {
+  color: var(--clr-attribute-1);
+}
+
+.memory__name {
+  color: var(--clr-attribute-2);
+}
+
+.verbal__name {
+  color: var(--clr-attribute-3);
+}
+
+.visual__name {
+  color: var(--clr-attribute-4);
+}
+
+.attribute :last-child {
+  margin-inline-start: auto;
+}
+
+.attribute__score {
+  color: var(--clr-summaryText-secondary);
+  font-weight: 800;
+}
+
+.summary__more-info {
+  color: var(--clr-summaryText-tertiary);
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--clr-cardBackground-secondary);
+  font-weight: 500;
+  padding: 1rem;
+  margin-block: 0.25rem;
+  font-size: var(--font-text-large);
+}
+
+.summary__more-info:hover,
+.summary__more-info:focus-visible {
+  cursor: pointer;
+  background: linear-gradient(
+    var(--clr-resultBackgroundGradient-1),
+    var(--clr-resultBackgroundGradient-2)
+  );
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 37.5rem) {
+  .wrapper {
+    margin-block: max(0.5rem, 10vh);
+    max-inline-size: var(--maxWidth-desktop);
+  }
+
+  .card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  .result,
+  .summary {
+    padding-block: 2.5rem 3rem;
+  }
+
+  .result {
+    border-radius: 2rem;
+  }
+
+  .result__score-container {
+    margin-block: 2.3rem 1.8rem;
+  }
+
+  .result__score {
+    padding: 3rem;
+    inline-size: 12.5rem;
+    block-size: 12.5rem;
+  }
+
+  .result__score-total {
+    margin-top: 0;
+  }
+
+  .result__description {
+    padding-inline: 1.5rem;
+    margin-block: 1rem 0;
+  }
+
+  .summary {
+    padding-inline: 2.5rem;
+  }
+
+  .summary__header {
+    margin-block-end: 0.8rem;
+  }
+
+  .summary__more-info {
+    margin-block: 1.2rem 0;
+  }
+}
