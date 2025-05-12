@@ -18,8 +18,8 @@
 
   @media (min-width: 37.5rem) {
     --font-header: 1.5rem;
-    --font-text: 1.1rem;
-    --font-text-large: 1.2rem;
+    --font-text: 1.12rem;
+    --font-text-large: 1.12rem;
     --font-result-big: 4.5rem;
     --font-result-medium: 2rem;
   }
@@ -44,6 +44,7 @@
   --clr-resultText-primary: var(--clr-white);
   --clr-resultText-secondary: var(--clr-lightLavender);
   --clr-resultText-tertiary: #8478fd;
+  --clr-resultText-4: #b0b0fd;
   --clr-summaryText-primary: var(--clr-darkGrayBlue);
   --clr-summaryText-secondary: #9e969f;
   --clr-summaryText-tertiary: var(--clr-white);
